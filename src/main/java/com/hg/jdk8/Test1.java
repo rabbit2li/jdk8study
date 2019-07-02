@@ -1,0 +1,33 @@
+package com.hg.jdk8;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Consumer;
+
+public class Test1 {
+
+    public static void main(String[] args) {
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8);
+
+        for (int i = 0; i < list.size(); i++) {
+            System.out.print(list.get(i) + " ");
+        }
+
+        System.out.println();
+
+        for (Integer i : list) {
+            System.out.print(i + " ");
+        }
+
+        System.out.println();
+
+        list.forEach(integer -> System.out.print(integer + " "));
+
+        System.out.println();
+
+        //method reference
+        list.forEach(System.out::print);
+
+
+    }
+}
